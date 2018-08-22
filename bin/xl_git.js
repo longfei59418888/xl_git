@@ -22,11 +22,7 @@ let package = JSON.parse(shell.cat(path.join(__dirname, '../package.json')))
 program
     .version(package.version)
     .usage('[cmd] [options]')
-    .option('-m,--message', '设置 commit -m 信息')
-    .option('--SecretKey', '设置 cdn 的 SecretKey 值')
-    .option('--Bucket', '设置 cdn 的 Bucket 值')
-    .option('--Region', '设置 cdn 的 Region 值')
-    .option('--Key', '设置 cdn 的 Key 值')
+    .option('-m', '设置 commit -m 信息')
 program
     .command('push <path>')
     .description('上传某一个文件，或者所有文件')
